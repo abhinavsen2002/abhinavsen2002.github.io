@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+
+
+
+
+
+
+
+
+
+
+/*---Media Queries --*/
+@media (min-width: 300px) {
+  hr{
+    margin-top: 5vw;
+    margin-bottom: 10vw;
+  }
+  .heading{
+    margin-top: 10vw;
+    
+  }
+  .logo{
+    max-width: 50vw;
+  }
+  .aboutme{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    font-size:40px;
+    text-align: center;
+  }
+  .introduction {
+    font-size:20px;
+    text-align: center;
+    
+  }
+  
+  .photo{
+    
+    margin-left: 5.5vw;
+    margin-top: 0vw;
+    margin-right: 0vw;
+  
+    max-width: 90%;
+  }
+  .slide1{
+    max-width: 100%;
+    margin-left: 0vw;
+    margin-bottom: 0vw;
+    margin-top: 0vw
+  }
+  .slide2{
+    max-width:100%;
+  
+  }
+  .mazeballtxt{
+    font-size: 20px;
+    color: rgb(116, 116, 116);
+    margin-left: 36vw;
+    
+  }
+  .spacetxt{
+    font-size: 20px;
+    color: rgb(116, 116, 116);
+   margin-left: 40vw;
+    margin-bottom:100vw;
+  }
+  .cartoontxt{
+    font-size: 20px;
+    color: rgb(116, 116, 116);
+    text-align: center;
+    display:block;
+    
+  
+  }
+  .heading{
+    text-align: center;
+    font-size: 4vw;
+  }
+  .abhinavsen{
+    max-width:106%;
+    margin-bottom: 10vw;
+    margin-left: -2vw;
+    margin-top: -2vw;
+  }
+  .footer{
+    text-align: center;
+    background-color: rgb(33, 134, 160);
+    color: white;
+    padding-bottom: 60px ;
+    margin-top: 10vw;
+    margin-left: -2vw;
+
+  }
+
+
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+/*--- Fixed Background Image --*/
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#fixed {
+  background-image: url('img/mac.png');
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+
+
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+.nav-item{
+  margin-left: 4vw;
+  font-size:20px
+}
+
+
+@media (min-width:1000px){
+
+.aboutme{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 4vw;
+  position:relative;
+  left:30%;
+  top:40%;
+}
+.introduction {
+  font-size:1.7vw;
+  margin-left: 20vw;
+ 
+}
+
+.photo{
+  float:right;
+  margin-left: 5.5vw;
+  margin-top: 5vw;
+  margin-right: 20vw;
+  position: relative;
+  bottom: 10vw; 
+
+  max-width: 25%;
+}
+ .slide1{
+  max-width: 49%;
+  
+}
+.slide2{
+  max-width:49%;
+
+}
+.mazeballtxt{
+  font-size: 1.2vw;
+  color: rgb(116, 116, 116);
+  position:absolute;
+  right:0%;
+  text-align: center;
+  
+
+}
+.spacetxt{
+  font-size: 1.2vw;
+  color: rgb(116, 116, 116);
+  position: absolute;
+  right:0%; 
+  text-align: center;
+  
+  
+}
+.cartoontxt{
+  font-size: 1.2vw;
+  color: rgb(116, 116, 116);
+  margin-left: 24vw;
+
+}
+.heading{
+  text-align: center;
+  font-size: 4vw;
+}
+.abhinavsen{
+  max-width:106%;
+  margin-bottom: 10vw;
+  margin-left: -2vw;
+  margin-top: -2vw;
+}
+.footer{
+  text-align: center;
+  background-color: rgb(33, 134, 160);
+  color: white;
+  padding-bottom: 60px ;
+  margin-top: 10vw;
+  margin-left: -2vw;
+  
+
+}
+.column{
+  float: left;
+  width: 50%;
+  padding: 5px
+}
+.row::after{
+  content:"";
+  clear: both;
+  display: table;
+}
+.row{
+  /* margin-left: 18vw */
+}
+
+}
+.connect a{
+  font-size: 4vw;
+  padding:4vw;
+  position:relative;
+  left: 34vw;
+  top: 15vw;
+   
+}
+.connect-heading{
+  position: relative;
+  left: 45vw;
+  top: 10vw;
+  font-size:4vw
+}
+}
+footer{
+  background-color: rgb(44, 44, 44); 
+  color:blanchedalmond;
+}
+footer p{
+  margin-left: 15%;
+}
+footer img{
+  margin-left: 15%;
+  margin-bottom: 5vw;
+}
+
+
+
+
