@@ -119,6 +119,8 @@ section {
 }
 .post-top-meta.authorpage .author-thumb {
 	margin-top:40px;
+	width: 120px;
+	height: 120px;
 }
 .post-top-meta span {
 	font-size:0.9rem;
