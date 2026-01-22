@@ -1,0 +1,107 @@
+.blogs {
+  padding: 4rem 0;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: calc(100vh - 80px);
+}
+
+.section {
+  width: 100%;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 1rem 0;
+  text-align: left;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 3rem 0;
+  text-align: left;
+}
+
+.postsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.postCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: block;
+}
+
+.postCard:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(99, 102, 241, 0.5);
+  transform: translateY(-2px);
+}
+
+.postDate {
+  font-size: 0.875rem;
+  color: #6366f1;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.postTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 1rem 0;
+}
+
+.postExcerpt {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.8;
+  margin: 0 0 1rem 0;
+}
+
+.readMore {
+  font-size: 1rem;
+  color: #6366f1;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.postCard:hover .readMore {
+  color: #818cf8;
+}
+
+@media (max-width: 768px) {
+  .blogs {
+    padding: 2rem 0;
+    max-width: 90%;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+  }
+
+  .postCard {
+    padding: 1.5rem;
+  }
+
+  .postTitle {
+    font-size: 1.5rem;
+  }
+
+  .postExcerpt {
+    font-size: 1rem;
+  }
+}
+

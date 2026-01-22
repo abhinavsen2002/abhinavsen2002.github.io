@@ -1,0 +1,36 @@
+.button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.primary {
+  background: #6366f1;
+  color: #fff;
+}
+
+.primary:hover {
+  background: #5558e3;
+  transform: translateY(-2px);
+}
+
+.secondary {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.secondary:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.button:active {
+  transform: translateY(0);
+}
