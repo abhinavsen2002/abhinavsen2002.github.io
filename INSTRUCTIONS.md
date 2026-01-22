@@ -21,13 +21,6 @@ src/
 
 ## Easy Updates
 
-### Update Resume Link
-Change the Google Drive link in **two places**:
-1. `src/components/Navigation.jsx` (line 4)
-2. `src/pages/Home.jsx` (line 18)
-
-Replace `YOUR_FILE_ID` with your actual Google Drive file ID.
-
 ### Update Content
 
 **Home Page** (`src/pages/Home.jsx`):
