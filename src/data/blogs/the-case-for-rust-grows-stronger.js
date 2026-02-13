@@ -126,7 +126,7 @@ Good luck figuring out which of the twenty variables in your call chain was None
 When Rust's compiler rejects your code, you get:
 
 \`\`\`
-error[E0502]: cannot borrow \`data\` as mutable because it is also borrowed as immutable
+error[E0502]: cannot borrow data as mutable because it is also borrowed as immutable
   --> src/main.rs:12:5
    |
 10 |     let reference = &data[0];
@@ -181,7 +181,7 @@ fn find_users(users: Vec<User>, name: String) -> Vec<User> {
 }
 \`\`\`
 
-The code review practically writes itself: "Why are we calling `.clone()` three times? Why collect into a Vec just to iterate again? Why does this take ownership of the Vec instead of borrowing?"
+The code review practically writes itself: Why are we calling clone() three times? Why collect into a Vec just to iterate again? Why does this take ownership of the Vec instead of borrowing?
 
 The inefficiency is *in the types*. Compare this to similar inefficiency in JavaScript:
 
@@ -194,7 +194,7 @@ function findUsers(users, name) {
 }
 \`\`\`
 
-The double spread is wasteful, but nothing in the code signature tells you that. You need to read and understand the implementation. In Rust, the excessive cloning screams at you from the function signature and the explicit `.clone()` calls.
+The double spread is wasteful, but nothing in the code signature tells you that. You need to read and understand the implementation. In Rust, the excessive cloning screams at you from the function signature and the explicit clone() calls.
 
 ## Performance by Default
 
@@ -310,5 +310,5 @@ The AI revolution didn't make Rust obsolete. It made Rust essential.
 
 ---
 
-*P.S. - Yes, I know \`Box<Pin<>>\` has legitimate uses in async Rust. The point is that when you see unnecessary complexity, it's immediately obvious. In dynamically typed languages, complexity hides until it bites you.*`
+*P.S. - Yes, I know Box<Pin<>> has legitimate uses in async Rust. The point is that when you see unnecessary complexity, it's immediately obvious. In dynamically typed languages, complexity hides until it bites you.*`
 };
