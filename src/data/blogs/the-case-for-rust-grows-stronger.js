@@ -322,7 +322,9 @@ The hardest part of software engineering has shifted from "make it work" to "kee
 
 The AI revolution didn't make Rust obsolete. It made Rust essential.
 
----
+That said, Rust isn't always the answer. If you're building Kubernetes operators or microservices that need deep integration with cloud-native tooling, Go and Java have better ecosystem support and gentler learning curves - that's a valid trade-off. If you need that last 5% of performance and can afford the engineering cost, hand-tuned C might still edge out Rust marginally.
 
-*P.S. - Yes, I know Box<Pin<>> has legitimate uses in async Rust. The point is that when you see unnecessary complexity, it's immediately obvious. In dynamically typed languages, complexity hides until it bites you.*`
+But ask yourself: what's the cost? In an AI-dominated world where shipping is trivial and maintenance is the bottleneck, Rust's compiler-enforced safety and explicit performance model often justify the steeper learning curve. The benefits compound over time, especially when AI is writing most of your code.
+
+Choose the right tool for the job. But don't dismiss Rust just because it has a reputation for being hard. In the age of AI, hard to write matters less than hard to break.`
 };
