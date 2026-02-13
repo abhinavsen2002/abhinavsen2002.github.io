@@ -55,6 +55,117 @@
   margin-bottom: 0;
 }
 
+/* Markdown headings */
+.content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 3rem 0 1.5rem 0;
+  line-height: 1.3;
+}
+
+.content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 2.5rem 0 1rem 0;
+  line-height: 1.4;
+}
+
+/* Code blocks */
+.content pre {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.content code {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9em;
+}
+
+/* Inline code */
+.content p code,
+.content li code {
+  background: rgba(99, 102, 241, 0.2);
+  color: #a5b4fc;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Code inside pre blocks */
+.content pre code {
+  background: none;
+  color: #e2e8f0;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Lists */
+.content ul,
+.content ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.content li {
+  margin: 0.5rem 0;
+  line-height: 1.8;
+}
+
+.content ul {
+  list-style-type: disc;
+}
+
+.content ol {
+  list-style-type: decimal;
+}
+
+/* Blockquotes */
+.content blockquote {
+  border-left: 4px solid #6366f1;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+/* Links */
+.content a {
+  color: #6366f1;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.3);
+  transition: all 0.2s ease;
+}
+
+.content a:hover {
+  color: #818cf8;
+  border-bottom-color: #818cf8;
+}
+
+/* Horizontal rules */
+.content hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 3rem 0;
+}
+
+/* Strong/Bold */
+.content strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Emphasis/Italic */
+.content em {
+  font-style: italic;
+}
+
 .notFound {
   text-align: center;
   padding: 4rem 0;

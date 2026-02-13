@@ -1,4 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import styles from './BlogPost.module.css';
 import { blogPosts } from '../data/blogs';
 
@@ -30,9 +32,9 @@ const BlogPost = () => {
         </header>
 
         <div className={styles.content}>
-          {post.content.split('\n\n').map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            {post.content}
+          </ReactMarkdown>
         </div>
       </article>
     </div>
