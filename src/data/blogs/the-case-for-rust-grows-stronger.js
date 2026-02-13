@@ -8,9 +8,9 @@ export default {
 
 And this is precisely why Rust's moment has arrived.
 
-## The Maintenance Crisis Nobody's Talking About
+## The Maintenance Crisis
 
-Here's what I've observed: AI is remarkably good at writing code that *works*. It's disturbingly bad at writing code you'll want to *maintain*.
+AI is remarkably good at writing code that *works*. It's disturbingly bad at writing code you'll want to *maintain*.
 
 In permissive languages, AI will happily generate something like this Python:
 
@@ -48,6 +48,8 @@ where
 \`\`\`
 
 The difference? The Rust version *cannot* be vague. The type signatures are documentation that the compiler enforces. You know exactly what goes in and what comes out. AI can't hand-wave the details.
+
+This benefit isn't unique to Rust - any strongly typed language provides this clarity. TypeScript, Go, and Java all force AI to be explicit about data types. But where Rust truly shines is what comes next: its compiler.
 
 ## The Compiler as AI's Guardrails
 
@@ -166,35 +168,60 @@ The iteration cycle is faster and more deterministic. The compiler is essentiall
 
 ## The Beautiful Obviousness of Bad Rust
 
-Here's my favorite thing about Rust in the AI era: inefficient Rust code is *visible* in the type signatures.
+Here's my favorite thing about Rust in the AI era: ownership issues are *visible* in the code.
 
-When reviewing AI-generated Python or JavaScript, inefficiencies hide in runtime behavior. But when you see Rust like this:
+When AI generates code in Rust, the compiler forces it to be explicit about ownership. Consider this function that AI might generate:
 
 \`\`\`rust
-fn find_users(users: Vec<User>, name: String) -> Vec<User> {
+fn process_users(users: Vec<User>) -> Vec<String> {
     users.into_iter()
-        .filter(|u| u.name.clone() == name.clone())
-        .collect::<Vec<_>>()
-        .into_iter()
-        .map(|u| u.clone())
+        .map(|u| u.name)
         .collect()
 }
+
+// Calling code
+let my_users = vec![user1, user2, user3];
+let names = process_users(my_users.clone());  // Had to clone!
+println!("Still have {} users", my_users.len());  // Want to use users again
 \`\`\`
 
-The code review practically writes itself: Why are we calling clone() three times? Why collect into a Vec just to iterate again? Why does this take ownership of the Vec instead of borrowing?
+The code review writes itself: "Why is the caller cloning the entire Vec just to extract names? This function should borrow, not take ownership."
 
-The inefficiency is *in the types*. Compare this to similar inefficiency in JavaScript:
+Here's the key insight: AI didn't add that \`clone()\` because it wanted to. The compiler *forced* it to. The original AI-generated code probably tried to use \`my_users\` after passing it to \`process_users\`, the compiler rejected it, and AI added \`clone()\` to make it compile.
 
-\`\`\`javascript
-function findUsers(users, name) {
-    return users
-        .filter(u => u.name === name)
-        .map(u => ({...u}))
-        .map(u => ({...u}));
+That \`clone()\` is a visible marker that says "ownership is changing hands here" - and in this case, unnecessarily. The fix is obvious:
+
+\`\`\`rust
+fn process_users(users: &[User]) -> Vec<String> {  // Just borrow
+    users.iter()
+        .map(|u| u.name.clone())
+        .collect()
+}
+
+let names = process_users(&my_users);  // No clone needed
+\`\`\`
+
+The same visibility applies to heap allocations. When you see:
+
+\`\`\`rust
+fn get_config() -> Box<Config> {
+    Box::new(Config::default())
 }
 \`\`\`
 
-The double spread is wasteful, but nothing in the code signature tells you that. You need to read and understand the implementation. In Rust, the excessive cloning screams at you from the function signature and the explicit clone() calls.
+You immediately ask: "Why are we heap-allocating this small config struct?" The \`Box<>\` makes the allocation strategy explicit.
+
+Compare this to Python or JavaScript where similar inefficiencies are invisible:
+
+\`\`\`python
+def process_users(users):
+    return [u.name for u in users]
+
+my_users = [user1, user2, user3]
+names = process_users(my_users[:])  # Copying? Maybe? Who knows?
+\`\`\`
+
+Is that \`[:]\` slice necessary? Does the function mutate the list? Do you need a copy? You have to read the implementation to know. In Rust, the function signature tells you everything.
 
 ## Performance by Default
 
