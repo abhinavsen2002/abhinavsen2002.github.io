@@ -223,30 +223,13 @@ names = process_users(my_users[:])  # Copying? Maybe? Who knows?
 
 Is that \`[:]\` slice necessary? Does the function mutate the list? Do you need a copy? You have to read the implementation to know. In Rust, the function signature tells you everything.
 
-## Performance by Default
+## Performant Code That Stays Performant
 
-AI doesn't optimize. It writes code that works. In interpreted languages, this means you inherit all the default performance costs.
+Here's a maintenance problem: in dynamic languages, performance characteristics can silently degrade. AI generates code that works, but six months later after refactoring, it's mysteriously slow.
 
-Here's AI-generated Python for aggregating data:
-
-\`\`\`python
-def aggregate_by_user(events):
-    result = {}
-    for event in events:
-        user_id = event['user_id']
-        if user_id not in result:
-            result[user_id] = []
-        result[user_id].append(event)
-    return result
-\`\`\`
-
-This works, but creates a ton of intermediate allocations. Every dictionary lookup, every append, every key check.
-
-The Rust equivalent AI generates:
+The Rust equivalent makes performance characteristics explicit:
 
 \`\`\`rust
-use std::collections::HashMap;
-
 fn aggregate_by_user(events: Vec<Event>) -> HashMap<UserId, Vec<Event>> {
     events.into_iter()
         .fold(HashMap::new(), |mut acc, event| {
@@ -258,7 +241,11 @@ fn aggregate_by_user(events: Vec<Event>) -> HashMap<UserId, Vec<Event>> {
 }
 \`\`\`
 
-This isn't necessarily *more* optimized in logic, but the lack of garbage collection, stack allocation of small types, and zero-cost abstractions mean it's fast by default. AI doesn't need to think about performance - Rust's design handles it.
+The signature tells you: \`Vec<Event>\` means ownership transfer (no hidden copies), \`into_iter()\` means we're consuming the input (zero allocation), \`entry().or_insert_with()\` means at most one allocation per unique user.
+
+These performance guarantees don't silently break. If someone tries to add unnecessary copies, they'll have to add explicit \`clone()\` calls. If they want heap allocation, they'll add \`Box<>\`. The performance model is visible and stable.
+
+To add to all of this, you don't inherit performance costs from the nature of the language. Rust's lack of garbage collection, zero-cost abstractions, and stack allocation of small types mean it's just fast by default.
 
 ## The Memory Safety Guarantee
 
