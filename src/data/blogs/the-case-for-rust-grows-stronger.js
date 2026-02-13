@@ -111,38 +111,90 @@ Can AI generate sloppy Rust? Sure. But the slop won't compile. The borrow checke
 
 These aren't optional considerations AI can skip. They're enforced by the language.
 
+## The Compiler as AI's Teacher
+
+Here's something that doesn't get enough credit: Rust's compiler errors are exceptionally good at explaining what's wrong and how to fix it.
+
+When Python throws a runtime error, you get:
+
+\`\`\`
+AttributeError: 'NoneType' object has no attribute 'process'
+\`\`\`
+
+Good luck figuring out which of the twenty variables in your call chain was None. AI has to guess, try a fix, run the code again, and hope.
+
+When Rust's compiler rejects your code, you get:
+
+\`\`\`
+error[E0502]: cannot borrow \`data\` as mutable because it is also borrowed as immutable
+  --> src/main.rs:12:5
+   |
+10 |     let reference = &data[0];
+   |                     ----- immutable borrow occurs here
+11 |
+12 |     data.push(5);
+   |     ^^^^^^^^^^^^ mutable borrow occurs here
+13 |
+14 |     println!("{}", reference);
+   |                    --------- immutable borrow later used here
+   |
+help: consider moving the println! call
+\`\`\`
+
+The compiler tells you:
+- Exactly what the problem is
+- Where it occurs (line numbers)
+- Why it's a problem (the borrow conflict)
+- Often includes a suggestion for how to fix it
+
+This is gold for AI agents. They don't need to run the code, observe the failure, and deduce the cause. The compiler is explaining the issue in structured, unambiguous language that AI excels at parsing.
+
+In JavaScript or Python, AI iterates through a loop of:
+1. Generate code
+2. Run it
+3. Observe mysterious runtime behavior
+4. Guess at the cause
+5. Try again
+
+In Rust, the loop is:
+1. Generate code
+2. Compiler explains exactly what's wrong
+3. Fix it
+4. Repeat until it compiles
+
+The iteration cycle is faster and more deterministic. The compiler is essentially pair-programming with the AI, providing expert feedback on every attempt. No other mainstream language has error messages this pedagogical.
+
 ## The Beautiful Obviousness of Bad Rust
 
-Here's my favorite thing about Rust in the AI era: bad Rust code is *obviously* bad.
+Here's my favorite thing about Rust in the AI era: inefficient Rust code is *visible* in the type signatures.
 
-When reviewing AI-generated Python or JavaScript, you need to think hard about potential issues. But when you see Rust like this:
+When reviewing AI-generated Python or JavaScript, inefficiencies hide in runtime behavior. But when you see Rust like this:
 
 \`\`\`rust
-fn read_file(path: &str) -> Box<Pin<Box<dyn Future<Output = Result<String, Error>>>>> {
-    Box::new(Box::pin(async move {
-        tokio::fs::read_to_string(path).await
-    }))
+fn find_users(users: Vec<User>, name: String) -> Vec<User> {
+    users.into_iter()
+        .filter(|u| u.name.clone() == name.clone())
+        .collect::<Vec<_>>()
+        .into_iter()
+        .map(|u| u.clone())
+        .collect()
 }
 \`\`\`
 
-Your immediate reaction is: "Why the hell is there a \`Box<Pin<Box<>>>\` in a simple file reader?"
+The code review practically writes itself: "Why are we calling `.clone()` three times? Why collect into a Vec just to iterate again? Why does this take ownership of the Vec instead of borrowing?"
 
-The over-engineering is *visible*. You don't need deep language expertise to know something's wrong. The type signature screams it. Compare this to the equivalent overengineered JavaScript:
+The inefficiency is *in the types*. Compare this to similar inefficiency in JavaScript:
 
 \`\`\`javascript
-function readFile(path) {
-    return Promise.resolve().then(() => {
-        return new Promise((resolve, reject) => {
-            fs.readFile(path, (err, data) => {
-                if (err) reject(err);
-                else resolve(data.toString());
-            });
-        });
-    });
+function findUsers(users, name) {
+    return users
+        .filter(u => u.name === name)
+        .map(u => ({...u}))
+        .map(u => ({...u}));
 }
 \`\`\`
 
-This nested promise nonsense will happily sit in your codebase for years. In Rust, the type system makes the complexity explicit.
+The double spread is wasteful, but nothing in the code signature tells you that. You need to read and understand the implementation. In Rust, the excessive cloning screams at you from the function signature and the explicit `.clone()` calls.
 
 ## Performance by Default
 
@@ -239,6 +291,7 @@ What we need now is a language that:
 - Makes bad code obviously bad ✓
 - Provides performance without manual optimization ✓
 - Turns runtime errors into compile-time errors ✓
+- Gives AI clear, actionable feedback to iterate quickly ✓
 
 That language is Rust.
 
