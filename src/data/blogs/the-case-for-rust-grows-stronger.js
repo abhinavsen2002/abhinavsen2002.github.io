@@ -320,8 +320,6 @@ I'm not saying Rust is perfect, or that AI-generated Rust is always great. But I
 
 The hardest part of software engineering has shifted from "make it work" to "keep it working." Rust was designed for exactly this problem.
 
-The AI revolution didn't make Rust obsolete. It made Rust essential.
-
 That said, Rust isn't always the answer. If you're building Kubernetes operators or microservices that need deep integration with cloud-native tooling, Go and Java have better ecosystem support and gentler learning curves - that's a valid trade-off. If you need that last 5% of performance and can afford the engineering cost, hand-tuned C might still edge out Rust marginally.
 
 But ask yourself: what's the cost? In an AI-dominated world where shipping is trivial and maintenance is the bottleneck, Rust's compiler-enforced safety and explicit performance model often justify the steeper learning curve. The benefits compound over time, especially when AI is writing most of your code.
