@@ -12,10 +12,15 @@ const BlogPost = () => {
   // Find the blog post by slug
   const post = blogPosts.find(post => post.slug === slug);
 
-  // Convert inline $math$ to \(math\) while protecting currency like $25 or $100
+  // Convert inline $math$ to \(math\) while protecting currency like $25 or $100.
+  // The backslashes are doubled so markdown keeps them as literal "\(" and "\)"
+  // (a single backslash before "(" is a markdown escape and would be dropped).
   const processedContent = useMemo(() => {
     if (!post?.content) return '';
-    return post.content.replace(/(?<!\$)\$(?!\$)(?!\d)([^$\n]+?)(?<!\$)\$(?!\$)/g, '\\($1\\)');
+    return post.content.replace(
+      /(?<!\$)\$(?!\$)(?!\d)([^$\n]+?)(?<!\$)\$(?!\$)/g,
+      (_, math) => `\\\\(${math}\\\\)`
+    );
   }, [post?.content]);
 
   // Render KaTeX math when post is loaded

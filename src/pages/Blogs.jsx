@@ -4,11 +4,11 @@ import styles from './Blogs.module.css';
 import { blogYears } from '../data/blogs';
 
 const Blogs = () => {
-  // All years open by default, each toggleable
+  // All years start collapsed, each toggleable
   const [openYears, setOpenYears] = useState(() => {
     const initial = {};
     blogYears.forEach((group) => {
-      initial[group.year] = true;
+      initial[group.year] = false;
     });
     return initial;
   });
