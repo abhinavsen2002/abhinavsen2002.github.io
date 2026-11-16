@@ -26,7 +26,7 @@ Most people would agree:
 - **Needs** are things that are *required* — necessary for survival. Food. Shelter. GTA VI.
 - **Wants**, on the other hand, are things that improve our happiness. They're optional. Vacations. Parties. The GTA VI collector's edition.
 
-![needs = requirement — food, shelter, and GTA VI](/images/posts/needs-vs-wants/01_needs_wants_definition.png)
+![needs = requirement, wants = optional — food, shelter, GTA VI, travel, and a second GTA VI](/images/posts/needs-vs-wants/01_needs_wants_definition.png)
 
 But there are two problems with this.
 
