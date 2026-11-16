@@ -272,6 +272,23 @@
   font-style: italic;
 }
 
+/* Math (KaTeX) */
+.content :global(.katex-display) {
+  margin: 2.25rem 0;
+  padding: 1.25rem 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.content :global(.katex) {
+  font-size: 1.15em;
+  color: #fff;
+}
+
+
 .notFound {
   text-align: center;
   padding: 4rem 0;

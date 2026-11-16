@@ -1,7 +1,7 @@
 export default {
   id: 3,
   title: 'Stop calling all your mistakes tech debt',
-  date: 'February 14, 2026',
+  date: 'February 14, 2025',
   slug: 'stop-calling-all-your-mistakes-tech-debt',
   excerpt: 'Not every messy piece of code is tech debt. Some of it is just...well, let\'s be honest about what it really is.',
   content: `"We'll fix that tech debt later."

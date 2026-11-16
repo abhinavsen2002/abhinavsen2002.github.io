@@ -1,7 +1,7 @@
 export default {
   id: 4,
   title: 'The case for RUST grows stronger in an AI dominated world',
-  date: 'February 14, 2026',
+  date: 'October 18, 2025',
   slug: 'the-case-for-rust-grows-stronger',
   excerpt: 'AI makes shipping code trivial. The hard part now? Living with it six months later. Rust\'s notorious strictness might be exactly what we need.',
   content: `We're living through a fascinating paradox. AI coding assistants can now generate hundreds of lines of working code in seconds. The bottleneck in software development has shifted - shipping code is no longer the hard part. Maintaining it is.

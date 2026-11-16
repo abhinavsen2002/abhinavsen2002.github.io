@@ -1,3 +1,4 @@
+import { useEffect, useRef, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -6,9 +7,47 @@ import { blogPosts } from '../data/blogs';
 
 const BlogPost = () => {
   const { slug } = useParams();
+  const contentRef = useRef(null);
 
   // Find the blog post by slug
   const post = blogPosts.find(post => post.slug === slug);
+
+  // Convert inline $math$ to \(math\) while protecting currency like $25 or $100
+  const processedContent = useMemo(() => {
+    if (!post?.content) return '';
+    return post.content.replace(/(?<!\$)\$(?!\$)(?!\d)([^$\n]+?)(?<!\$)\$(?!\$)/g, '\\($1\\)');
+  }, [post?.content]);
+
+  // Render KaTeX math when post is loaded
+  useEffect(() => {
+    const tryRenderMath = () => {
+      if (window.renderMathInElement && contentRef.current) {
+        window.renderMathInElement(contentRef.current, {
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '\\[', right: '\\]', display: true },
+            { left: '\\(', right: '\\)', display: false }
+          ],
+          throwOnError: false
+        });
+        return true;
+      }
+      return false;
+    };
+
+    if (!tryRenderMath()) {
+      const interval = setInterval(() => {
+        if (tryRenderMath()) {
+          clearInterval(interval);
+        }
+      }, 100);
+      const timeout = setTimeout(() => clearInterval(interval), 5000);
+      return () => {
+        clearInterval(interval);
+        clearTimeout(timeout);
+      };
+    }
+  }, [processedContent]);
 
   if (!post) {
     return (
@@ -96,9 +135,9 @@ const BlogPost = () => {
           </div>
         )}
 
-        <div className={styles.content}>
+        <div className={styles.content} ref={contentRef}>
           <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
-            {post.content}
+            {processedContent}
           </ReactMarkdown>
         </div>
       </article>
@@ -107,4 +146,3 @@ const BlogPost = () => {
 };
 
 export default BlogPost;
-

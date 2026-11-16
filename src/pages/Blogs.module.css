@@ -9,6 +9,14 @@
   width: 100%;
 }
 
+.topHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
 .title {
   font-size: 3rem;
   font-weight: 700;
@@ -20,14 +28,131 @@
 .subtitle {
   font-size: 1.25rem;
   color: rgba(255, 255, 255, 0.6);
-  margin: 0 0 3rem 0;
+  margin: 0;
   text-align: left;
+}
+
+.toggleAllBtn {
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: #a5b4fc;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.toggleAllBtn:hover {
+  background: rgba(99, 102, 241, 0.2);
+  color: #fff;
+  border-color: #6366f1;
+}
+
+.yearsList {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.yearSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.yearHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.25rem 1.75rem;
+  color: #fff;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.25s ease;
+}
+
+.yearHeader:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+.yearHeaderOpen {
+  background: rgba(99, 102, 241, 0.06);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.yearInfo {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.yearNumber {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.yearDivider {
+  color: #6366f1;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.yearTagline {
+  font-size: 1.25rem;
+  color: #a5b4fc;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.yearMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.postCount {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-weight: 500;
+}
+
+.chevron {
+  width: 20px;
+  height: 20px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.yearHeader:hover .chevron {
+  color: #fff;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+  color: #6366f1;
 }
 
 .postsGrid {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
+  padding-left: 0.5rem;
 }
 
 .postCard {
@@ -84,12 +209,35 @@
     max-width: 90%;
   }
 
+  .topHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
   .title {
     font-size: 2rem;
   }
 
   .subtitle {
     font-size: 1.125rem;
+  }
+
+  .yearHeader {
+    padding: 1rem 1.25rem;
+  }
+
+  .yearNumber {
+    font-size: 1.5rem;
+  }
+
+  .yearDivider {
+    font-size: 1.25rem;
+  }
+
+  .yearTagline {
+    font-size: 1rem;
   }
 
   .postCard {
@@ -103,5 +251,8 @@
   .postExcerpt {
     font-size: 1rem;
   }
-}
 
+  .postsGrid {
+    padding-left: 0;
+  }
+}

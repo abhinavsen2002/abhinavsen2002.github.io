@@ -6,18 +6,47 @@ import needsVsWants from './needs-vs-wants';
 import stopCallingMistakesTechDebt from './stop-calling-all-your-mistakes-tech-debt';
 import theCaseForRust from './the-case-for-rust-grows-stronger';
 import theValueOfTime from './the-value-of-time';
+import theBulletsInOurHearts from './the-bullets-in-our-hearts';
 
-// Export all blog posts as an array
-// Posts are ordered by ID (newest first)
+export const blogYears = [
+  {
+    year: '2026',
+    tagline: 'in my public era',
+    posts: [
+      inequalityPart2,
+      theValueOfTime,
+      needsVsWants,
+      facingFearOfBeingJudged
+    ]
+  },
+  {
+    year: '2025',
+    tagline: 'cooking as an SWE',
+    posts: [
+      theCaseForRust,
+      stopCallingMistakesTechDebt
+    ]
+  },
+  {
+    year: '2024',
+    tagline: 'college ends',
+    posts: [
+      dearYashi,
+      anOdeToAFriend,
+      theBulletsInOurHearts
+    ]
+  }
+];
+
+// Export all blog posts as a flat array for route lookups
 export const blogPosts = [
-  dearYashi,
   inequalityPart2,
   theValueOfTime,
   needsVsWants,
+  facingFearOfBeingJudged,
   theCaseForRust,
   stopCallingMistakesTechDebt,
+  dearYashi,
   anOdeToAFriend,
-  facingFearOfBeingJudged
+  theBulletsInOurHearts
 ];
-
-

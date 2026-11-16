@@ -1,7 +1,7 @@
 export default {
   id: 8,
   title: 'Dear Yashi',
-  date: 'November 16, 2026',
+  date: 'November 10, 2024',
   slug: 'dear-yashi',
   excerpt: 'I was wondering for a while, what it was that I wanted to do. A letter in reply to a letter, about what I learnt, about myself, and about you.',
   content: `Dear Yashi,

@@ -1,7 +1,7 @@
 export default {
   id: 2,
   title: 'hello friend, hows death?',
-  date: 'January 22, 2026',
+  date: 'August 14, 2024',
   slug: 'an-ode-to-a-friend',
   excerpt: 'Hello friend, It\'s been a while since I last wrote to you. The last letter I wrote, I never completed. It seemed so stupid- once I sat down to write, it felt like I had nothing to say...',
   content: `Hello friend,
