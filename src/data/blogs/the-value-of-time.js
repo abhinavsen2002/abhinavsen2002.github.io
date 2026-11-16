@@ -11,6 +11,8 @@ How much money would I need to pay you to do an hour of work? And how much money
 
 No, seriously. You've probably never been invited to hang out with the cool kids, so you might just shrug and say *"sure, whatever."* But that is a mistake. Everything has a price. 
 
+![Everything has a price — What's your price?](/images/posts/value-of-time/01_whats_your_price.png)
+
 So since we're already wasting time on the internet, let us now waste our time answering this question with unnecessary detail.
 
 ---
@@ -21,7 +23,7 @@ The most naive way to value time is simple: **the value of your time should matc
 
 If you can trade one hour of your labor for $100, you should logically be willing to pay up to $100 to save that hour.
 
-![What's your price? What position?](/images/posts/value-of-time/01_whats_your_price.png)
+![Trading time for money](/images/posts/value-of-time/02_time_money_trade.png)
 
 It's a clean concept: buy back your time, and invest it back into higher-earning work. After all, if it only costs $50 to pay someone else to do a 1-hour chore, you should take that deal immediately, save the hour, and earn $100 doing your own job instead.
 
@@ -39,11 +41,13 @@ The value of our time isn't static—**it depends entirely on the task you're be
 
 We will almost never do a task we hate, no matter how much we're paid. Good luck paying anyone a reasonable wage to rename messy files properly (\`final_final_v3_really_final.doc\`) while listening to endless two-minute WhatsApp voice notes.
 
-![Task preference spectrum: from dislike to neutral to love](/images/posts/value-of-time/02_preference_spectrum.png)
+![Listening to two-minute WhatsApp voice notes](/images/posts/value-of-time/03_whatsapp_voice_note.png)
 
 On the flip side, for tasks we love, we don't just work for free—we literally *pay* money to do them. We pay $20 to sit in a movie theater for two hours. We take on generational debt to attend university.
 
 In other words, the subjective value of our time swings wildly depending on how much we're enjoying ourselves. 
+
+![Task preference spectrum: from dislike to neutral to love](/images/posts/value-of-time/04_task_preference_spectrum.png)
 
 So if we want an objective baseline, we have to strip enjoyment out of the equation:
 
@@ -57,9 +61,9 @@ Even for a completely neutral task, your hourly rate isn't fixed. **It depends o
 
 If you have endless free time and no responsibilities, an extra free hour has virtually zero value to you. When your free time is neutral, your neutral time is free.
 
-![I have no time: the busy professional](/images/posts/value-of-time/03_busy_stickman.png)
-
 On the other hand, if you're a functioning human being juggling a career, health, family, and hobbies, your remaining hours are scarce and precious. 
+
+![Responsibilities: juggling family, career, and life](/images/posts/value-of-time/05_responsibilities.png)
 
 In fact, the value of our time increases **asymptotically** with how busy we are.
 
@@ -87,17 +91,15 @@ If you already have a billion dollars in the bank, the value of an additional $1
 
 At that net worth, an extra million dollars feels like loose change, but an extra free hour means another quick trip to your favorite private island.
 
-![Dora pointing at marginal value of money: 1/W curve](/images/posts/value-of-time/05_dora_graphs_for_no_reason.png)
-
-Conversely, if you have barely enough cash to scrape by, you'll trade your hours at almost any rate—even well below minimum wage—just to survive.
-
 Beyond a survival threshold, we can model the marginal value of money as inversely proportional to your net worth:
 
 $$\\text{Marginal Value of Money} \\propto \\frac{1}{W}$$
 
+![Graphs for no reason: marginal value of money curve 1/W](/images/posts/value-of-time/07_graphs_for_no_reason.png)
+
 And of course, there's surely a reasonable limit to how much money one person could possibly want, right?
 
-![Elon Musk Ballerina: "Bathroom break? That's wage theft"](/images/posts/value-of-time/08_elon_ballerina.png)
+![Elon Musk Ballerina: "Bathroom break? That's wage theft"](/images/posts/value-of-time/08_elon_bathroom_break.png)
 
 *(Nope. Apparently not.)*
 
@@ -113,14 +115,14 @@ Why on earth would you choose to spend that day doing something neutral, for any
 
 This means the value of time also depends directly on **how much longer you expect to live.** The closer you are to death, the more precious every single remaining hour becomes. No amount of money can buy you happiness once you have exhausted all the time required to experience it. Your last day on Earth should never be spent on neutral chores.
 
-![The four variables: hourly wage, busyness, net worth, life expectancy](/images/posts/value-of-time/06_four_variables.png)
-
 Putting it all together, the value of your time depends on four key variables:
 
 1. **Hourly baseline** ($w$)
 2. **How busy you are** ($H$: free hours left per day)
 3. **How much money you already have** ($M$: net worth)
 4. **How much longer you expect to live** ($Y$: years remaining)
+
+![The four variables: hourly wage, busyness, net worth, life expectancy](/images/posts/value-of-time/09_four_variables.png)
 
 Mathematically, we can capture this as a 3D scalar field:
 
@@ -140,12 +142,14 @@ All of these economic arguments lead to the same conclusion: **the value of your
 
 It feels intuitive at first: older you will have less time remaining and more accumulated capital. Supply down, demand up.
 
-![Level 5 Thinker: It's not over yet](/images/posts/value-of-time/09_level5_thinker.png)
+![Level 5 Thinker: It's not over yet](/images/posts/value-of-time/10_level5_thinker.png)
 
 **Except this entire framing is fundamentally broken, for three glaring reasons:**
 
 ### 1. The Depreciation of Youth
 You are only young once. The quality of your time is not constant—it is actively depreciating. An hour of health, energy, curiosity, and mobility in your twenties is fundamentally not the same asset as an hour at eighty connected to an IV drip. Hoarding your time for a future when you can no longer use it makes no sense.
+
+![The depreciation of youth: your youth is right at the beginning](/images/posts/value-of-time/11_youth_depreciation.png)
 
 ### 2. Unknown Mortality
 We have no idea when we are going to die. Undervaluing your time today carries infinitely more risk than overvaluing it. The risk-reward calculus of deferred living is terrible:
@@ -154,14 +158,16 @@ We have no idea when we are going to die. Undervaluing your time today carries i
 
 What good is selling your youth to fund a comfortable retirement you might never actually reach?
 
+![Selling your time: Risk vs Reward](/images/posts/value-of-time/12_risk_reward.png)
+
 ### 3. Future Scarcity Pricing
 If you know for a fact that your time will be infinitely precious when you are older, **why aren't you pricing that scarcity in today?**
 
 Think about how absurd this is:
 
-![Trading Bitcoin in 2012](/images/posts/value-of-time/10_bitcoin_trade.png)
+![Trading Bitcoin in 2012 for an iPhone](/images/posts/value-of-time/13_bitcoin_trade.png)
 
-![Take my best years instead](/images/posts/value-of-time/11_take_my_best_years.png)
+![Trading away prime years for mild conveniences](/images/posts/value-of-time/14_take_my_best_years.png)
 
 If someone told you about the future of Bitcoin in 2012, you wouldn't sell it for a pizza or trade it away for an iPhone. In finance, rational investors always *price in* future scarcity—you never liquidate scarce assets unless you desperately need the cash.
 
@@ -173,13 +179,13 @@ In fact, the entire concept of *"neutral time"* is ridiculous. Why should any pa
 
 ## A Reality Check
 
-![Eepy penguin dialogue: "What's his deal? Rich parents. Understood."](/images/posts/value-of-time/12_rich_parents_eepy.png)
+![Eepy penguin dialogue: "What's his deal? Rich parents. Understood."](/images/posts/value-of-time/15_rich_parents_eepy.png)
 
 Look, let's be practical. The world is cruel. You need to earn a living, because by default, society doesn't guarantee your survival for free.
 
 We all need money to live, and that means we have to sell some portion of our time to get it. 
 
-![Eepy the plushie penguin with glasses](/images/posts/value-of-time/13_real_eepy_penguin.png)
+![Eepy the plushie penguin](/images/posts/value-of-time/16_real_eepy_penguin.png)
 
 **But beyond what you need to survive?**
 

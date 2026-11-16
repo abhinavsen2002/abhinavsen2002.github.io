@@ -40,7 +40,7 @@ Do we *need* to live — or do we *want* to live?
 
 Really, clearly, we don't *need* to live. At the end of the day, what do our lives really provide? And while there's never been a cooler time to be filled with crippling existential dread — shouldn't life be something we *want* to do for ourselves?
 
-![He's so cool](/images/posts/needs-vs-wants/02_hes_so_cool.png)
+![Never been a cooler time to be filled with crippling existential dread](/images/posts/needs-vs-wants/02_existential_dread_doomer.png)
 
 But if life itself is a want… how can anything else in our life be a need?
 
@@ -52,6 +52,8 @@ Think about this. If the way we interact with the world is through our conscious
 
 It's often said you can live eight minutes without air, but only a second without hope. Taken to its extreme, one could even argue that nothing is necessary — and hence nothing is a need.
 
+![Insert quote to sound smart — nothing is necessary](/images/posts/needs-vs-wants/03_einstein_quote.png)
+
 ---
 
 ## Problem 2: The List Is Absurdly Small
@@ -62,14 +64,15 @@ If we *really* required everything we claim to need, most people wouldn't surviv
 
 So what do we *really* need to survive? The list is absurdly small.
 
+![The things we require: Air, Food, Water, Gaming chair](/images/posts/needs-vs-wants/04_things_we_require.png)
+
 Do we need things because we require them for life — or because we require them to live a *good* life? But who even decides what that means?
 
-![Uhhh.....](/images/posts/needs-vs-wants/03_uhhh_trio.png)
+![Requirements for a good life: money bags, sports car, and a house](/images/posts/needs-vs-wants/05_requirements_good_life.png)
 
 Maybe the notion of needs and wants is just a spectrum of how important something is — and somewhere, as a matter of convenience, we drew an arbitrary line.
 
-![Wants–needs spectrum with an arbitrary line — who decides importance?](/images/posts/needs-vs-wants/04_spectrum.png)
-
+![Wants and needs spectrum with an arbitrary line — who decides this?](/images/posts/needs-vs-wants/06_spectrum_arbitrary_line.png)
 
 At this point you may be asking: *who cares?*
 
@@ -81,7 +84,7 @@ Yes, we've been a bit philosophical so far. And yes, being pretentious is one of
 
 **Thinking of your needs as a type of want is actually very practical** — for four reasons.
 
-![But we can't just do whatever](/images/posts/needs-vs-wants/05_cant_just_do_whatever.png)
+![Thinking of your needs as a type of want — everything is a want](/images/posts/needs-vs-wants/07_pretentious_reasons.png)
 
 ---
 
@@ -101,11 +104,11 @@ This is incredibly powerful.
 
 Consider this: you're in bed on a Monday morning and you think — *"I hate Mondays, but I need to wake up."* And then… you wake up. Every week. Every year. Easy.
 
+![Monday morning in bed: I hate Mondays, but I need to wake up](/images/posts/needs-vs-wants/08_monday_bed.png)
+
 Compare that to the philosopher who sits there and goes: *Well, do I want to wake up? What happens if I miss work? Do I want to work? Will I ever retire? Why am I happier asleep than I am to be alive?*
 
 Yeah. Not exactly the most useful thought.
-
-![Its all made up](/images/posts/needs-vs-wants/06_einstein_chalkboard.png)
 
 Needs are a useful psychological crutch. They prevent us from making active decisions most of the time. They give our life structure and help us make good decisions on autopilot. They reduce the cognitive load of our choices, since we can avoid actually questioning them.
 
@@ -113,21 +116,28 @@ And yes — we love being told what to do.
 
 But here's the thing. Sure, some of our needs might legitimately improve our lives. But many of them are just inherited from the environment we grew up in. In fact, most things we call needs probably aren't even our own.
 
+![Needs inherited from the environment we grew up in](/images/posts/needs-vs-wants/09_inherited_environment.png)
+
 When we think of things as **wants**, we retain the flexibility and the freedom to choose. This forces us to ask the ultimate question:
 
 > **Why do I want this?**
 
 Which in turn enables critical thinking and the ability to make informed choices. The moment we think of something as a *need*, it feels like we have no choice at all.
 
+![Choice A: Become doctor (need) vs Choice B: Follow passion (want)](/images/posts/needs-vs-wants/10_choice_doctor_vs_passion.png)
+
 So sure — it's okay to run life on autopilot. But let's ask ourselves at least once a year: *do I want the things I'm struggling for?* That leads to better, more intentional decisions.
 
 ### A few examples
 
 - Your partner gives you a million reasons to leave, but you stick by them anyway because you *just have to make things work*.
+
+![When your partner gives you a million reasons to leave, but you stick by them anyway](/images/posts/needs-vs-wants/11_partner_reasons_to_leave.png)
+
 - You have everything you could've ever wanted as a kid — but you still feel like you *have* to achieve something bigger.
 - Or maybe, like me, you were an overachiever in school, and now you have a crippling need for validation all the time. And like me, this subconsciously affects everything you do.
 
-![I never thought about this](/images/posts/needs-vs-wants/06f_never_thought.png)
+![Me when I am not an expert at the thing I just started](/images/posts/needs-vs-wants/12_overachiever_validation.png)
 
 Thinking of these things as **wants** actually gives you a healthier perspective. Because it's only when you acknowledge something as optional that you give yourself the space to decide if it's genuinely for you.
 
@@ -135,13 +145,15 @@ And who knows — maybe one Monday morning, as your alarm rings, you'll think to
 
 And then… yeah. That's right. It was just a dream. And now you wake up for real.
 
+![Waking up for real](/images/posts/needs-vs-wants/13_just_a_dream.png)
+
 ---
 
 ## Reason 2: It's Liberating
 
 Life gets a lot more peaceful when you realize the fundamental truth that the rock you live on doesn't care for your petty concerns — and that what you do doesn't actually *matter*. How can it be necessary?
 
-![Thinking face](/images/posts/needs-vs-wants/06b_thinking.png)
+![Relaxing on the beach — what you do does not actually matter](/images/posts/needs-vs-wants/14_liberating_beach.png)
 
 ---
 
@@ -150,6 +162,8 @@ Life gets a lot more peaceful when you realize the fundamental truth that the ro
 Let's go back to that friend.
 
 Do you *need* to leave your shitty life because someone forced you to? Or do you *want* to do it because you want your kids to be happy?
+
+![I still gotta do it for me kids!](/images/posts/needs-vs-wants/15_angry_friend_kids.png)
 
 But why do you want your kids to be happy? Because you care for them, right? Then why is that missing from your perspective?
 
@@ -161,9 +175,9 @@ Or you can tell yourself the exact same thing, framed differently:
 
 > *"My kids make my life worth living."*
 
-![House](/images/posts/needs-vs-wants/08_house.png)
-
 When you love someone or something, life isn't just something you do *for* them. They are part of your life — and hence a part of your choices.
+
+![When you love someone, they are part of your life and your choices](/images/posts/needs-vs-wants/16_kids_hug.png)
 
 Sometimes, in your lowest moments, these choices feel like sacrifices that were forced on us. And we lash out on the people we love. That's so stupid — because what were those choices for in the first place?
 
@@ -177,11 +191,9 @@ The final benefit of thinking of things as wants — not needs — is that it le
 
 Me, for example, and my fear of failing. Does this really help me — or am I just finding reasons to beat myself up?
 
-![Big brain](/images/posts/needs-vs-wants/09_big_brain.png)
+![I need to be successful...](/images/posts/needs-vs-wants/17_graduate_failure.png)
 
 Failing to do a task isn't the same thing as being a failure. Especially when you realize the task itself was optional to begin with.
-
-![Maybe I've been too hard on myself](/images/posts/needs-vs-wants/13_too_hard_on_myself.png)
 
 So let's stop chasing for a day. Take a break. Look at the things we think we need — and do something we haven't done in a while.
 
@@ -207,7 +219,7 @@ We need to save money — but we have to see the world.
 
 We need to exercise. We need to rest. We need to love. And it's healthy when we get there — but also independence. Don't forget that.
 
-![Collage of conflicting needs and wants](/images/posts/needs-vs-wants/14_collage.png)
+![Collage of all the modern needs we pile onto ourselves](/images/posts/needs-vs-wants/18_needs_collage.png)
 
 Of course. So many things.
 
@@ -223,8 +235,6 @@ Maybe it's about unbecoming everything that isn't really you.
 
 ## Who Even Makes the Rules?
 
-![Under the tree](/images/posts/needs-vs-wants/10_under_the_tree.png)
-
 Besides — who even makes the rules anyway?
 
 The sun won't check your résumé before it rises.
@@ -235,9 +245,11 @@ Time doesn't pause to wait for your approval.
 
 And the waves never ask if you're doing enough.
 
-![Ocean waves](/videos/posts/needs-vs-wants/ocean.mp4)
+![Ocean waves](/images/posts/needs-vs-wants/19_ocean_waves.png)
 
 Because no matter what happens — tomorrow will still come. And the birds will still sing their songs for you.
+
+![A bird singing its song](/images/posts/needs-vs-wants/20_bird_singing.png)
 
 And maybe you'll choose to ignore them regardless — because you want to fight your own battles. And that's okay.
 
@@ -247,7 +259,7 @@ It's okay to fail. To try again. Or to give up.
 
 **You never needed to do it anyway.**
 
-![Beach relaxation](/images/posts/needs-vs-wants/11_beach_relax.png)
+![You were always enough](/images/posts/needs-vs-wants/21_always_enough.png)
 
 ---
 
