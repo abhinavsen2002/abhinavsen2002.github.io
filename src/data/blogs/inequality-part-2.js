@@ -1,6 +1,6 @@
 export default {
   id: 7,
-  title: 'Inequality, Part 2: Why Fairness Doesn\'t Fix Itself',
+  title: 'Inequality: Why Fairness Doesn\'t Fix Itself',
   date: 'November 16, 2026',
   slug: 'inequality-part-2',
   videoSrc: '/videos/posts/inequality-p2/inequality-p2.mp4',
